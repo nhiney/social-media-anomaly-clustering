@@ -1,0 +1,43 @@
+/* ============================================================
+   style.css — Custom overrides trên nền Tailwind CDN
+   ============================================================ */
+
+/* Transition mượt cho nút Like khi được kích hoạt */
+.like-btn.liked svg {
+    fill: #ef4444;
+    stroke: #ef4444;
+}
+
+.like-btn {
+    transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.like-btn:active {
+    transform: scale(1.35);
+}
+
+/* Hiệu ứng gõ phím cho textarea */
+textarea:focus {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+/* Banner quảng cáo — viền nháy nhẹ để thu hút click */
+@keyframes ad-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(234, 179, 8, 0.4); }
+    50%       { box-shadow: 0 0 0 6px rgba(234, 179, 8, 0); }
+}
+
+#ad-banner {
+    animation: ad-pulse 2.5s infinite;
+    cursor: pointer;
+}
+
+/* Modal overlay */
+#result-modal {
+    backdrop-filter: blur(4px);
+}
+
+/* Thanh tiến trình session */
+#session-bar-fill {
+    transition: width 1s linear;
+}

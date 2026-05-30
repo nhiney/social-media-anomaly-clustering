@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}SocialSim — Anomaly Detection Demo{% endblock %}</title>
+
+    <!-- Tailwind CSS CDN (v3) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN (radar chart + bar chart trong modal) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+
+    {% block head %}{% endblock %}
+</head>
+<body class="bg-gray-100 min-h-full font-sans antialiased">
+
+    {% block body %}{% endblock %}
+
+    <!-- Toast notification container (dùng bởi tracking.js) -->
+    <div id="toast-container"
+         class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 flex flex-col gap-2 items-center pointer-events-none">
+    </div>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>
