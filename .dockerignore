@@ -1,0 +1,5 @@
+web_demo/__pycache__/
+web_demo/**/*.pyc
+web_demo/.env
+web_demo/models/*.pkl
+web_demo/models/*.joblib
